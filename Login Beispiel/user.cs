@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace Login_Beispiel
 {
-     internal class user
+     public class user
     {
+        public
         int id;
         String email;
         String password;
+        String fullname;
     }
 }

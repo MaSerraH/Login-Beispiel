@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Login_Beispiel
 {
     internal static class Program
@@ -16,7 +17,9 @@ namespace Login_Beispiel
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            Form1 form1 = new Form1();
+            form1.ShowDialog();
         }
     }
 }

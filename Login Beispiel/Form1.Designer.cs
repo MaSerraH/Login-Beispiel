@@ -75,6 +75,7 @@
             this.tb2.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb2.Location = new System.Drawing.Point(133, 397);
             this.tb2.Name = "tb2";
+            this.tb2.PasswordChar = '?';
             this.tb2.Size = new System.Drawing.Size(206, 34);
             this.tb2.TabIndex = 5;
             // 
