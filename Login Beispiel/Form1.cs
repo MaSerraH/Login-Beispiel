@@ -41,7 +41,7 @@ namespace Login_Beispiel
             } 
         }
 
-        user usr = null;
+        user usr = new user();
         private void bt1_Click(object sender, EventArgs e)
         {
             String email = this.tb1.Text;
@@ -51,6 +51,41 @@ namespace Login_Beispiel
             {
                 MessageBox.Show("email und Passwort bitte eingeben!", "die Felde: email und Passwort sind leer!", MessageBoxButtons.OK);
                 return;
+            }
+
+            try
+            {
+                sqlConnection.Open();
+                String query = "select * from loginBeispiel where Email = @email and Password = @password";
+                 SqlCommand sqlcmd = new SqlCommand(query, sqlConnection);
+                sqlcmd.Parameters.AddWithValue("@email", email);
+                sqlcmd.Parameters.AddWithValue("@password", password);
+
+                SqlDataReader reader = sqlcmd.ExecuteReader();  
+                if (reader.Read())
+                {
+                    usr.Equals(reader[1].ToString());
+                    usr.Equals(reader[2].ToString());
+                    Form2 form2 = new Form2();
+                    form2.Show();
+                    this.Hide();
+                }
+
+                else
+                {
+                    MessageBox.Show("der User mit der email-adresse " + email + ", existiert nicht!", "Login fehlgeschlagen!", MessageBoxButtons.OK);
+                }
+             
+            }
+            catch (Exception ex )
+            {
+
+                MessageBox.Show(ex.Message, "Login Beispiel", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            }
+            finally
+            {
+                sqlConnection.Close();
+               
             }
         }
     }
