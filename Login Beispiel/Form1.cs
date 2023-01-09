@@ -46,6 +46,7 @@ namespace Login_Beispiel
         {
             String email = this.tb1.Text;
             String password = this.tb2.Text;
+            
 
             if (email.Length == 0 || password.Length == 0)
             {
@@ -66,6 +67,10 @@ namespace Login_Beispiel
                 {
                     usr.Equals(reader[1].ToString());
                     usr.Equals(reader[2].ToString());
+                    usr.Equals(reader[3].ToString());
+                    reader.Close();
+
+                    MessageBox.Show("Login erfolgt!", "erfolgreiche eingeloggt!", MessageBoxButtons.OK);
                     Form2 form2 = new Form2();
                     form2.Show();
                     this.Hide();
