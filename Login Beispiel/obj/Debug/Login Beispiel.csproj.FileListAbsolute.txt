@@ -1,0 +1,11 @@
+C:\Users\Mauricio\OneDrive\Documente\Dateien\SW. Beispiele\C#\Login Beispiel\Login Beispiel\bin\Debug\Login Beispiel.exe.config
+C:\Users\Mauricio\OneDrive\Documente\Dateien\SW. Beispiele\C#\Login Beispiel\Login Beispiel\bin\Debug\Login Beispiel.exe
+C:\Users\Mauricio\OneDrive\Documente\Dateien\SW. Beispiele\C#\Login Beispiel\Login Beispiel\bin\Debug\Login Beispiel.pdb
+C:\Users\Mauricio\OneDrive\Documente\Dateien\SW. Beispiele\C#\Login Beispiel\Login Beispiel\obj\Debug\Login Beispiel.csproj.AssemblyReference.cache
+C:\Users\Mauricio\OneDrive\Documente\Dateien\SW. Beispiele\C#\Login Beispiel\Login Beispiel\obj\Debug\Login Beispiel.csproj.SuggestedBindingRedirects.cache
+C:\Users\Mauricio\OneDrive\Documente\Dateien\SW. Beispiele\C#\Login Beispiel\Login Beispiel\obj\Debug\Login_Beispiel.Form1.resources
+C:\Users\Mauricio\OneDrive\Documente\Dateien\SW. Beispiele\C#\Login Beispiel\Login Beispiel\obj\Debug\Login_Beispiel.Properties.Resources.resources
+C:\Users\Mauricio\OneDrive\Documente\Dateien\SW. Beispiele\C#\Login Beispiel\Login Beispiel\obj\Debug\Login Beispiel.csproj.GenerateResource.cache
+C:\Users\Mauricio\OneDrive\Documente\Dateien\SW. Beispiele\C#\Login Beispiel\Login Beispiel\obj\Debug\Login Beispiel.csproj.CoreCompileInputs.cache
+C:\Users\Mauricio\OneDrive\Documente\Dateien\SW. Beispiele\C#\Login Beispiel\Login Beispiel\obj\Debug\Login Beispiel.exe
+C:\Users\Mauricio\OneDrive\Documente\Dateien\SW. Beispiele\C#\Login Beispiel\Login Beispiel\obj\Debug\Login Beispiel.pdb
