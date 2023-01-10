@@ -8,10 +8,10 @@ namespace Login_Beispiel
 {
      public class user
     {
-        public 
-        int id;
-        String email;
-        String password;
-        String fullname;
+        public int Id { get; set; }
+        public String Email { get; set; }
+        public String Password { get; set; }
+        public String Fullname { get; set; }
+       
     }
 }

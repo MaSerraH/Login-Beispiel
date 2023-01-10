@@ -19,7 +19,7 @@ namespace Login_Beispiel
     {
         
         SqlConnection sqlConnection;
-        public Form2()
+        public Form2(user user)
         {
             InitializeComponent();
             String connectionString = ConfigurationManager.ConnectionStrings["Login_Beispiel.Properties.Settings.C__DBConnectionString"].ConnectionString;
@@ -38,8 +38,10 @@ namespace Login_Beispiel
             SqlDataReader reader = sqlcmd.ExecuteReader();
             if (reader.Read())
             {
-               fullName = reader.GetValue(3).ToString();  
-                label1.Text = "Willkommen " + fullName +  "!";
+                user usr = new user();
+                usr.Fullname = reader[3].ToString();
+
+                label1.Text = "Willkommen " + usr.Fullname +  "!";
             }
             reader.Close();
             sqlConnection.Close();

@@ -71,9 +71,9 @@ namespace Login_Beispiel
                     
                     usr.Equals(reader[1].ToString());
                     usr.Equals(reader[2].ToString());
-                    fullName = reader[3].ToString();
+                    usr.Fullname = reader[3].ToString();
 
-                    MessageBox.Show("Login erfolgt! " + fullName, "erfolgreiche eingeloggt!", MessageBoxButtons.OK);
+                    MessageBox.Show("Login erfolgt! " + usr.Fullname, "erfolgreiche eingeloggt!", MessageBoxButtons.OK);
 
                     this.Hide();
                 }
@@ -92,7 +92,7 @@ namespace Login_Beispiel
             finally
             {
                 sqlConnection.Close();
-                Form2 form2 = new Form2();
+                Form2 form2 = new Form2(usr);
                 form2.ShowDialog();
 
             }
