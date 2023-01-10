@@ -17,34 +17,13 @@ namespace Login_Beispiel
    
     public partial class Form2 : Form
     {
-        
-        SqlConnection sqlConnection;
-        public Form2(user user)
+
+        public Form2(user usr)
         {
             InitializeComponent();
-            String connectionString = ConfigurationManager.ConnectionStrings["Login_Beispiel.Properties.Settings.C__DBConnectionString"].ConnectionString;
-            sqlConnection = new SqlConnection(connectionString);
-        }
 
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            String fullName;
-            sqlConnection.Open();
-
-
-            String query = "select * from loginBeispiel";
-            SqlCommand sqlcmd = new SqlCommand(query, sqlConnection);
-            SqlDataReader reader = sqlcmd.ExecuteReader();
-            if (reader.Read())
-            {
-                user usr = new user();
-                usr.Fullname = reader[3].ToString();
-
-                label1.Text = "Willkommen " + usr.Fullname +  "!";
-            }
-            reader.Close();
-            sqlConnection.Close();
+            label1.Text = "Willkommen " + usr.Fullname + "!";
+           
         }
     }
 }

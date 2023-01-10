@@ -20,6 +20,8 @@ namespace Login_Beispiel
 
             Form1 form1 = new Form1();
             form1.ShowDialog();
+            user usr = form1.usr;
+           
         }
     }
 }

@@ -43,12 +43,11 @@ namespace Login_Beispiel
 
         public user usr = null;
         private void bt1_Click(object sender, EventArgs e)
-        {
+        { 
+            user usr = new user();
+
             String email = this.tb1.Text;
             String password = this.tb2.Text;
-            String fullName;
-            int id;
-            
 
             if (email.Length == 0 || password.Length == 0)
             {
@@ -67,34 +66,34 @@ namespace Login_Beispiel
                 SqlDataReader reader = sqlcmd.ExecuteReader();  
                 if (reader.Read())
                 {
-                    user usr = new user();
-                    
+
                     usr.Equals(reader[1].ToString());
                     usr.Equals(reader[2].ToString());
-                    usr.Fullname = reader[3].ToString();
+                    usr.Fullname = reader.GetString(3);
 
                     MessageBox.Show("Login erfolgt! " + usr.Fullname, "erfolgreiche eingeloggt!", MessageBoxButtons.OK);
-
                     this.Hide();
                 }
 
                 else
                 {
                     MessageBox.Show("der User mit der email-adresse " + email + ", existiert nicht!", "Login fehlgeschlagen!", MessageBoxButtons.OK);
+                    Application.Exit();
                 }
-             
             }
             catch (Exception ex )
             {
-
                 MessageBox.Show(ex.Message, "Login Beispiel", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             }
             finally
             {
-                sqlConnection.Close();
-                Form2 form2 = new Form2(usr);
-                form2.ShowDialog();
+                if (usr != null)
+                {
+                    Form2 form2 = new Form2(usr);
+                    form2.ShowDialog();
+                }
 
+                sqlConnection.Close();
             }
         }
     }
