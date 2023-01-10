@@ -25,7 +25,7 @@ namespace Login_Beispiel
             String connectionString = ConfigurationManager.ConnectionStrings["Login_Beispiel.Properties.Settings.C__DBConnectionString"].ConnectionString;
             sqlConnection = new SqlConnection(connectionString);
         }
-        public user usr = new user();
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -38,7 +38,7 @@ namespace Login_Beispiel
             SqlDataReader reader = sqlcmd.ExecuteReader();
             if (reader.Read())
             {
-                fullName = reader.GetValue(3).ToString();  
+               fullName = reader.GetValue(3).ToString();  
                 label1.Text = "Willkommen " + fullName +  "!";
             }
             reader.Close();

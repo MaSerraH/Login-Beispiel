@@ -8,7 +8,7 @@ namespace Login_Beispiel
 {
      public class user
     {
-        public
+        public 
         int id;
         String email;
         String password;
