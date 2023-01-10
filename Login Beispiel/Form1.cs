@@ -73,7 +73,7 @@ namespace Login_Beispiel
                     usr.Equals(reader[2].ToString());
                     fullName = reader[3].ToString();
 
-                    MessageBox.Show("Login erfolgt!" + fullName, "erfolgreiche eingeloggt!", MessageBoxButtons.OK);
+                    MessageBox.Show("Login erfolgt! " + fullName, "erfolgreiche eingeloggt!", MessageBoxButtons.OK);
 
                     this.Hide();
                 }
